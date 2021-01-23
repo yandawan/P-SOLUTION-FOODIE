@@ -1,0 +1,24 @@
+server:
+  port: 8001
+  servlet:
+    context-path: /
+
+spring:
+  application:
+    name: foodie-rabbit-producer
+  http:
+    encoding:
+      charset: UTF-8
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    default-property-inclusion: NON_NULL
+    time-zone: GMT+8
+
+  rabbitmq:
+    addresses: 127.0.0.1:5672
+    connection-timeout: 15000
+    password: root
+    username: root
+    # 开启发送确认
+    publisher-confirms: true
+    virtual-host: /

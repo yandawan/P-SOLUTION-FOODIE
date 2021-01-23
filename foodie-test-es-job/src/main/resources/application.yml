@@ -1,0 +1,10 @@
+spring:
+  profiles:
+    active: simple-job
+
+zookeeper:
+  address: 127.0.0.1:2181,127.0.0.1:2182,127.0.0.1:2183
+  connectionTimeout: 10000
+  maxRetries: 3
+  namespace: elastic-job
+  sessionTimeout: 10000

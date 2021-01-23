@@ -1,0 +1,13 @@
+logging:
+  pattern:
+    dateformat: HH:mm:ss
+mybatis:
+  mapper-locations: /mybatis/*.xml
+spring:
+  datasource:
+    password: 123456
+    url: jdbc:mysql://localhost:3200/distribute?serverTimezone=Asia/Shanghai&useSSL=false
+    username: root
+  redis:
+    host: 127.0.0.1
+    port: 6400

@@ -1,0 +1,20 @@
+server:
+  port: 8881
+
+simpleJob:
+  cron: 0/5 * * * * ?
+  failover: true
+  jobParameter: source1=public,source2=private
+  jobShardingStrategyClass: com.dangdang.ddframe.job.lite.api.strategy.impl.AverageAllocationJobShardingStrategy
+  maxTimeDiffSeconds: -1
+  monitorExecution: true
+  monitorPort: 8889
+  shardingItemParameters: 0=beijing,1=shanghai,2=changchun,3=changsha,4=hangzhou
+  shardingTotalCount: 5
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3320/elasticjob?useUnicode=true&characterEncoding=utf-8&verifyServerCertificate=false&useSSL=false&requireSSL=false
+    username: root
+    password: 123456
